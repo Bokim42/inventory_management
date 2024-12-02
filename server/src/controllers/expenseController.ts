@@ -13,7 +13,7 @@ export const getExpensesByCategory = async (req: Request, res: Response): Promis
             },
         );
         const expenseByCategorySummary = expenseByCategorySummaryRaw.map(
-            (item) => ({
+            (item: any) => ({
                 ...item,
                 amount: Number(item.amount),
             })
